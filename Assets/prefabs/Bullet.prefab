@@ -12,6 +12,9 @@ GameObject:
   - 135: {fileID: 13553228}
   - 23: {fileID: 2336786}
   - 54: {fileID: 5438788}
+  - 114: {fileID: 11459948}
+  - 114: {fileID: 11410414}
+  - 114: {fileID: 11437930}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -79,6 +82,69 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &11410414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &11437930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021069322e7434548b0b4af9021ceb92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11459948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 168
+    i1: 63
+    i2: 33
+    i3: 195
+    i4: 24
+    i5: 170
+    i6: 96
+    i7: 68
+    i8: 73
+    i9: 99
+    i10: 242
+    i11: 63
+    i12: 120
+    i13: 108
+    i14: 179
+    i15: 36
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!135 &13553228
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -100,6 +166,10 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SendInterval
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

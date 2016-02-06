@@ -7,7 +7,7 @@ public class PlayerMove : NetworkBehaviour
 {
     public GameObject bulletPrefab;
 
-    void OnStartPlayer()
+    public override void OnStartLocalPlayer()
     {
         GetComponent<MeshRenderer>().material.color = Color.red;
     }
@@ -25,14 +25,18 @@ public class PlayerMove : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            FireBullet();
+            CmdFire();
         }
     }
 
-    private void FireBullet()
+    [Command]
+    private void CmdFire()
     {
         GameObject bullet = Instantiate(bulletPrefab, transform.position - transform.forward, Quaternion.identity)as GameObject;
         bullet.GetComponent<Rigidbody>().velocity = -transform.forward * 4;
+
+        //spawn on other clients
+        NetworkServer.Spawn(bullet);
 
         Destroy(bullet, 2.0f);
     }
